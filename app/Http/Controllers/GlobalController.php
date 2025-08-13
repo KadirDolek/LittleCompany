@@ -122,4 +122,9 @@ class GlobalController extends Controller
         $produits = Produit::all();
         return view('frontend.produitshop', compact('produits'));
     }
+
+    public function equipe(){
+        $employes = Employe::all();
+        return view('frontend.equipe', compact('employes'));
+    }
 }

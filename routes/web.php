@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GlobalController;
+use App\Models\Produit;
 
 
 
 Route::get('/', function () {
-    return view('welcome');
+    $produits = Produit::all();
+    return view('welcome', compact('produits'));
 });
 
 Route::get('/employes',[GlobalController::class,'employes']);
@@ -24,5 +26,6 @@ Route::post('/create_produit',[GlobalController::class, 'storeproduit'])->name('
 Route::delete('/remove_produit/{id}',[GlobalController::class, 'destroyproduit'])->name('remove_produit');
 
 Route::get('/produitshop',[GlobalController::class,'produitshop']);
+Route::get('/equipe',[GlobalController::class,'equipe']);
 
 

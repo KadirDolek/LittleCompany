@@ -4,7 +4,24 @@
 
 @section('content')
     
+<section>
 
-    <h1>Home Front-End</h1>
+         @include('Layout.partials.frontEnd.carousel')
+
+</section>
+<section>
+
+         @include('Layout.partials.frontEnd.service')
+
+</section>
+<section>
+
+         @include('Layout.partials.frontEnd.prod')
+
+</section>
+
+
+
+   
 
 @endsection

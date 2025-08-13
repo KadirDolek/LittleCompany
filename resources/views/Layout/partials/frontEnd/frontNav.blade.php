@@ -4,7 +4,7 @@
       <div class="navbar-nav" style="font-weight: bold">
         <a class="nav-link active" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="/contact">Contactez-nous</a>
-        <a class="nav-link" href="">Notre équipe</a>
+        <a class="nav-link" href="equipe">Notre équipe</a>
         <a class="nav-link" href="/produitshop">Nos produits</a>
         <a class="nav-link" href="/employes">==></a>
       </div>
