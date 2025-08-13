@@ -19,12 +19,22 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-          <td class="border px-4 py-2"></td>
-        </tr>
+        @foreach ($mails as $mail )   
+            <tr>
+            <th scope="row">{{ $mail->prenom}} {{ $mail->nom}}</th>       
+            <td>{{ $mail->sujet }}</td>
+            <td>{{ $mail->date }}</td>
+            <td>{{ $mail->mail }}</td>
+            <td>{{ $mail->message }}</td>
+            <td>
+                <form action="{{ route('remove_mail', $mail->id) }}" method="POST">
+                @csrf
+                @method('DELETE') 
+                <input type="submit" value="Supprimer">
+                </form>
+            </td>
+            </tr>
+        @endforeach
       </tbody>
     </table>
   </div>

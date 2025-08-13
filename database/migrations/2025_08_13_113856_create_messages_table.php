@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->integer('Tel');
+            $table->integer('tel');
             $table->string('mail')->unique();
             $table->string('sujet',50);
-            $table->longText('Message');
-            $table->timestamps();
+            $table->longText('message');
+            $table->timestamps('date');
         });
     }
 

@@ -15,3 +15,5 @@ Route::post('/create_employes',[GlobalController::class, 'store'])->name('add_em
 Route::delete('/remove_employes/{id}',[GlobalController::class, 'destroy'])->name('remove_employes');
 
 Route::get('/mail',[GlobalController::class,'mail']);
+Route::post('/create_mail',[GlobalController::class, 'mailstore'])->name('add_mail');
+Route::delete('/remove_mail/{id}',[GlobalController::class, 'destroy'])->name('remove_mail');

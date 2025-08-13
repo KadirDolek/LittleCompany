@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Employe;
+use App\Models\Message;
 
 class GlobalController extends Controller
 {
@@ -49,15 +50,27 @@ class GlobalController extends Controller
     }
 
     public function mail(){
-         return view('backend.mail');
+         $mails = Message::all(); 
+            return view('backend.mail', compact('mails'));
     }
-        public function storemessage(Request $request){
+    public function storemail(Request $request){
 
         $mail = new Message(); 
-        $mail->nom = $request->mail;
-        
-        $employe->save(); 
-        $employes = Employe::all();
-        return view('backend.employes', compact('employes'));
+        $mail->nom = $request->nom;
+        $mail->prenom = $request->prenom;
+        $mail->sujet = $request->sujet;
+        $mail->date = $request->date;
+        $mail->message = $request->message;
+        $mail->tel = $request->tel;
+        $mail->mail = $request->mail;
+        return view('backend.mail', compact('mail'));
+    }
+
+    public function destroymail(){
+        $mail = Message::where("id", $id);
+        $mail->delete();
+
+        $mail = Message::all(); 
+        return view('backend.mail', compact('mail'));
     }
 }
