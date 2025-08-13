@@ -47,4 +47,17 @@ class GlobalController extends Controller
         $employes = Employe::all(); 
         return view('backend.employes', compact('employes'));
     }
+
+    public function mail(){
+         return view('backend.mail');
+    }
+        public function storemessage(Request $request){
+
+        $mail = new Message(); 
+        $mail->nom = $request->mail;
+        
+        $employe->save(); 
+        $employes = Employe::all();
+        return view('backend.employes', compact('employes'));
+    }
 }
