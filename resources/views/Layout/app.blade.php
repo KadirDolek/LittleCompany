@@ -9,12 +9,12 @@
 </head>
 <body>
     {{-- Ici la nav --}}
-    @include() 
+    @include('Layout.partials.frontEnd.frontNav')
     <main>
         {{-- ici toutes les pages nommés 'content' --}}
         @yield('content')
     </main>
     {{-- Ici le footer  --}}
-    @include()
+    @
 </body>
 </html>

@@ -9,7 +9,7 @@
 </head>
 <body>
     {{-- Ici la nav avec @include--}}
-    
+    @include('Layout.partials.backEnd.backNav')
     <main>
         {{-- ici toutes les pages nommés 'content' avec @yield --}}
         @yield('content')
