@@ -7,10 +7,10 @@
     <title>MyLittleCompany</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-gradient-to-r from-gray-200 to-yellow-200">
     {{-- Ici la nav --}}
     @include('Layout.partials.frontEnd.frontNav')
-    <main>
+    <main >
         {{-- ici toutes les pages nommés 'content' --}}
         @yield('content')
     </main>
