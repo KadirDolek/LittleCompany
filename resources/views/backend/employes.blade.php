@@ -4,6 +4,7 @@
 
 @section('content')
 <section>
+  <p class="flex justify-center text-3xl text-red-900 font-extrabold italic text-shadow-sm text-shadow-black">Passage au serveur backend </p>
 <table class="mx-auto text-center table table-striped table-bordered mt-4" style="width: 900px">
   <caption class="text-center text-2xl" style="font-weight: bold">
     Liste des employés 

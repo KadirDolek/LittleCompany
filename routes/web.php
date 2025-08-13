@@ -8,7 +8,6 @@ use App\Http\Controllers\GlobalController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/backend', [GlobalController::class, 'backendwelcome'])->name('backend');
 
 Route::get('/employes',[GlobalController::class,'employes']);
 Route::post('/create_employes',[GlobalController::class, 'store'])->name('add_employes');

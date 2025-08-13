@@ -6,7 +6,7 @@
         <a class="nav-link" href="/contact">Contactez-nous</a>
         <a class="nav-link" href="">Notre équipe</a>
         <a class="nav-link" href="/produitshop">Nos produits</a>
-        <a class="nav-link" href="{{ route('backend') }}">==></a>
+        <a class="nav-link" href="/employes">==></a>
       </div>
     </div>
   </div>

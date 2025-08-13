@@ -9,9 +9,6 @@ use App\Models\Produit;
 
 class GlobalController extends Controller
 {
-    public function backendwelcome(){
-         return view('backendWelcome');
-    }
     
     public function employes(){
         $employes = Employe::all();
@@ -122,6 +119,7 @@ class GlobalController extends Controller
 }
 
     public function produitshop(){
-        return view('frontend.produitshop');
+        $produits = Produit::all();
+        return view('frontend.produitshop', compact('produits'));
     }
 }
