@@ -25,9 +25,10 @@
     <td class="align-middle">Textile</td>
     <td class="align-middle">Taille M, Cuir, Carhartt</td>
     <td>
-        <img style="width: 100px; height:100px" class="mx-auto" src="https://imgs.search.brave.com/r1Lrf2k7rdBj7XTENe0iDd1wmjN3HddY3ZjO0vVAmsQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS1jZG4uY2l0YWRp/dW0uY29tL2ltYWdl/LzI4LzgvNzYyNjI4/OC5wbmc_Zml0PWJv/dW5kcyZiZy1jb2xv/cj1FQkVERUYmd2lk/dGg9NTAwJmhlaWdo/dD03NTAmY2FudmFz/PTUwMC03NTA" alt="">
+        <img style="width: 100px;" class="mx-auto" src="https://imgs.search.brave.com/r1Lrf2k7rdBj7XTENe0iDd1wmjN3HddY3ZjO0vVAmsQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS1jZG4uY2l0YWRp/dW0uY29tL2ltYWdl/LzI4LzgvNzYyNjI4/OC5wbmc_Zml0PWJv/dW5kcyZiZy1jb2xv/cj1FQkVERUYmd2lk/dGg9NTAwJmhlaWdo/dD03NTAmY2FudmFz/PTUwMC03NTA" alt="">
     </td>
         <td class="align-middle">200</td>
+        <td class="align-middle"><input type="submit" value="Supprimer"></td>
     </tr>
 @foreach ($produits as $produit ) 
 <tr>
@@ -35,12 +36,12 @@
   <td class="align-middle">{{ $produit->type}}</td>
   <td class="align-middle">{{ $produit->descriptif }}</td>
   <td class="align-middle"><img src="{{ $produit->img }}" alt=""></td> 
-  <td>{{ $produit->prix }}</td>
-  <td>
-    <form action="{{ route('remove_produit', $produit->id) }}" method="POST">
+  <td class="align-middle">{{ $produit->prix }}</td>
+  <td class="align-middle">
+    <form  action="{{ route('remove_produit', $produit->id) }}" method="POST">
       @csrf
       @method('DELETE') 
-      <input type="submit" value="Supprimer">
+      <input  type="submit" value="Supprimer">
     </form>
  </td>
 </tr>
