@@ -43,6 +43,8 @@ class GlobalController extends Controller
     public function destroy($id){
         $employes = Employe::where("id", $id);
         $employes->delete();
+
+        $employes = Employe::all(); 
         return view('backend.employes', compact('employes'));
     }
 }
