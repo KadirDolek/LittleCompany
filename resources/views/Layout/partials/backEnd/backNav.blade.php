@@ -5,9 +5,11 @@
     </button>
     <div class="collapse navbar-collapse flex justify-content-center" id="navbarNavAltMarkup">
       <div class="navbar-nav" style="font-weight: bold">
-        <a class="nav-link active" aria-current="page" href="/welcome">Home</a>
-        <a class="nav-link" href="/liste">Liste</a>
-        <a class="nav-link" href="/student">Créer students</a>
+        <a class="nav-link active" aria-current="page" href="/backendWelcome">Home</a>
+        <a class="nav-link" href="/employes">Employés</a>
+        <a class="nav-link" href="">Mail</a>
+        <a class="nav-link" href="">Produits</a>
+        <a class="nav-link" href="/">==></a>
       </div>
     </div>
   </div>

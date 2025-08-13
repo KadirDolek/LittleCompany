@@ -9,3 +9,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/backendWelcome',[GlobalController::class,'backendwelcome']);
+Route::get('/employes',[GlobalController::class,'employes']);
