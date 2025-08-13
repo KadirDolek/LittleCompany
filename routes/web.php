@@ -19,3 +19,9 @@ Route::post('/create_mail',[GlobalController::class, 'storemail'])->name('storem
 Route::delete('/remove_mail/{id}',[GlobalController::class, 'destroymail'])->name('remove_mail');
 
 Route::get('/contact',[GlobalController::class,'contact']);
+
+Route::get('/produit',[GlobalController::class,'produits']);
+Route::post('/create_produit',[GlobalController::class, 'storeproduit'])->name('add_produit');
+Route::delete('/remove_produit/{id}',[GlobalController::class, 'destroyproduit'])->name('remove_produit');
+
+

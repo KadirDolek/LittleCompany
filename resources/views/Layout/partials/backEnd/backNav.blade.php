@@ -5,7 +5,7 @@
         <a class="nav-link active" aria-current="page" href="{{ route('backend') }}">Home</a>
         <a class="nav-link" href="/employes">Employés</a>
         <a class="nav-link" href="/mail">Mail</a>
-        <a class="nav-link" href="">Produits</a>
+        <a class="nav-link" href="/produit">Produits</a>
         <a class="nav-link" href="/">==></a>
       </div>
     </div>
