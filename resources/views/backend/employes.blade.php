@@ -20,24 +20,24 @@
     </tr>
   </thead>
   <tbody>
-    @foreach ($employes as $employes )
-    <tr>
-      <th scope="row">{{ $employes['nom']}}</th>
-      <td>{{ $employes['prenom']}}</td>
-      <td>{{ $employes['age'] }}</td>
-      <td>{{ $employes['email'] }}</td>
-      <td>{{ $employes['post'] }}</td>
-      <td>{{ $employes['role'] }}</td>
-      <td>{{ $employes['salaire'] }}</td>
-      {{-- <td>
-        <form action="{{ route('remove_student', $etudiants['id']) }}" method="POST">
-          @csrf
-          @method('DELETE') 
-          <input type="submit" value="Supprimer">
-        </form>
-     </td> --}}
-    </tr>
-    @endforeach
+  @foreach ($employes as $employe )   
+<tr>
+  <th scope="row">{{ $employe->nom}}</th>       
+  <td>{{ $employe->prenom}}</td>
+  <td>{{ $employe->age }}</td>
+  <td>{{ $employe->email }}</td>
+  <td>{{ $employe->post }}</td>
+  <td>{{ $employe->role }}</td>
+  <td>{{ $employe->salaire }}</td>
+  <td>
+    <form action="{{ route('remove_employes', $employe->id) }}" method="POST">
+      @csrf
+      @method('DELETE') 
+      <input type="submit" value="Supprimer">
+    </form>
+ </td>
+</tr>
+@endforeach
   </tbody>
 </table>
 </section>

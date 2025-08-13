@@ -11,3 +11,4 @@ Route::get('/', function () {
 Route::get('/backend', [GlobalController::class, 'backendwelcome'])->name('backend');
 Route::get('/employes',[GlobalController::class,'employes']);
 Route::post('/create_employes',[GlobalController::class, 'store'])->name('add_employes');
+Route::delete('/remove_employes/{id}',[GlobalController::class, 'destroy'])->name('remove_employes');

@@ -32,12 +32,17 @@ class GlobalController extends Controller
         $employe->age = $request->age;
         $employe->email = $request->email;
         $employe->post = $request->post;
-        $employes->role = $request->role;
+        $employe->role = $request->role;
         $employe->salaire = $request->salaire;
 
         
         $employe->save(); 
-        
+        $employes = Employe::all();
+        return view('backend.employes', compact('employes'));
+    }
+    public function destroy($id){
+        $employes = Employe::where("id", $id);
+        $employes->delete();
         return view('backend.employes', compact('employes'));
     }
 }

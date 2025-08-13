@@ -9,7 +9,7 @@
         <a class="nav-link" href="">Contactez-nous</a>
         <a class="nav-link" href="">Notre équipe</a>
         <a class="nav-link" href="">Nos produits</a>
-        <a class="nav-link" href="/backendWelcome">==></a>
+        <a class="nav-link" href="{{ route('backend') }}">==></a>
       </div>
     </div>
   </div>
