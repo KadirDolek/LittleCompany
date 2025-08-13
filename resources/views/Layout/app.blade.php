@@ -15,6 +15,6 @@
         @yield('content')
     </main>
     {{-- Ici le footer  --}}
-    @
+    
 </body>
 </html>

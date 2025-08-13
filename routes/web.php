@@ -24,4 +24,6 @@ Route::get('/produit',[GlobalController::class,'produits']);
 Route::post('/create_produit',[GlobalController::class, 'storeproduit'])->name('add_produit');
 Route::delete('/remove_produit/{id}',[GlobalController::class, 'destroyproduit'])->name('remove_produit');
 
+Route::get('/produitshop',[GlobalController::class,'produitshop']);
+
 

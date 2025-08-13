@@ -113,11 +113,15 @@ class GlobalController extends Controller
         return view('backend.produit', compact('produits')); 
     }
 
-     public function destroyproduit($id){
-    $produit = Produit::where("id", $id);
-    $produit->delete();
+    public function destroyproduit($id){
+        $produit = Produit::where("id", $id);
+        $produit->delete();
 
-    $produits = Produit::all(); 
-    return view('backend.produit', compact('produits')); 
+        $produits = Produit::all(); 
+        return view('backend.produit', compact('produits')); 
 }
+
+    public function produitshop(){
+        return view('frontend.produitshop');
+    }
 }

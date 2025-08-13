@@ -3,3 +3,5 @@
 @section('title','MyLittleCompany')
 
 @section('content')
+
+@endsection
