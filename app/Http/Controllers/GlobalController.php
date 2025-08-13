@@ -41,6 +41,9 @@ class GlobalController extends Controller
         $employes = Employe::all();
         return view('backend.employes', compact('employes'));
     }
+
+
+
     public function destroy($id){
         $employes = Employe::where("id", $id);
         $employes->delete();
@@ -49,10 +52,17 @@ class GlobalController extends Controller
         return view('backend.employes', compact('employes'));
     }
 
+
+
+
     public function mail(){
          $mails = Message::all(); 
             return view('backend.mail', compact('mails'));
     }
+
+
+
+
     public function storemail(Request $request){
 
         $mail = new Message(); 
@@ -63,14 +73,24 @@ class GlobalController extends Controller
         $mail->message = $request->message;
         $mail->tel = $request->tel;
         $mail->mail = $request->mail;
-        return view('backend.mail', compact('mail'));
+
+        $mail->save();
+
+    return redirect()->route('mail');
     }
 
-    public function destroymail(){
-        $mail = Message::where("id", $id);
-        $mail->delete();
 
-        $mail = Message::all(); 
-        return view('backend.mail', compact('mail'));
+
+
+    public function destroymail($id){
+        $mails = Message::where("id", $id);
+        $mails->delete();
+
+        $mails = Message::all();
+        return view('backend.mail', compact('mails'));
+    }
+
+    public function contact(){
+        return view('frontend.contact');
     }
 }

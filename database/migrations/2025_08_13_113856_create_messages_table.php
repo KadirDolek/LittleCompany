@@ -17,9 +17,10 @@ return new class extends Migration
             $table->string('prenom');
             $table->integer('tel');
             $table->string('mail')->unique();
+            $table->date('date');
             $table->string('sujet',50);
             $table->longText('message');
-            $table->timestamps('date');
+            $table->timestamps();
         });
     }
 
